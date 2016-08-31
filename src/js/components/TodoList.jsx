@@ -1,13 +1,12 @@
 import React from 'react';
 
-export default class TodoList extends React.Component {
-  render() {
-    const list = this.props.todos.map((todo, i) => <li key={i}>{todo.text}</li>);
+export default function TodoList(props) {
+  const { todos } = props;
+  const list = todos.map((todo, i) => <li key={i}>{todo.text}</li>);
 
-    return (
-      <ul>
-        {list}
-      </ul>
-    );
-  }
+  return (
+    <ul>
+      {list}
+    </ul>
+  );
 }

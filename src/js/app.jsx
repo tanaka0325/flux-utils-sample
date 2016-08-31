@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Todo from './components/Todo';
+import TodoApp from './TodoContainer';
 
 render(
-  <Todo />,
+  <TodoApp />,
   document.getElementById('content')
 );
