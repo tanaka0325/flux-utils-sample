@@ -1,11 +1,11 @@
 import { Container } from 'flux/utils';
 import React from 'react';
 
-import TodoStore from './TodoStore';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm';
+import TodoStore from '../TodoStore';
+import TodoList from './TodoList';
+import TodoForm from './TodoForm';
 
-class TodoApp extends React.Component {
+class _TodoContainer extends React.Component {
   static getStores() {
     return [TodoStore];
   }
@@ -24,5 +24,5 @@ class TodoApp extends React.Component {
   }
 }
 
-const TodoContainer = Container.create(TodoApp);
+const TodoContainer = Container.create(_TodoContainer);
 export default TodoContainer;

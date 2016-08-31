@@ -5,24 +5,24 @@ export default class TodoForm extends React.Component {
   constructor() {
     super();
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this._onSubmit = this._onSubmit.bind(this);
+    this._onChange = this._onChange.bind(this);
   }
 
-  handleSubmit(e) {
+  _onSubmit(e) {
     e.preventDefault();
     Actions.addTodo(this.state.text);
   }
 
-  handleChange(e) {
+  _onChange(e) {
     this.setState({ text: e.target.value });
   }
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} />
+        <form onSubmit={this._onSubmit}>
+          <input onChange={this._onChange} />
           <button type>Add Todo</button>
         </form>
       </div>
