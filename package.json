@@ -2,9 +2,12 @@
   "name": "flux-utils-sample",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/js/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "pack": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
